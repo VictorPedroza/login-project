@@ -6,7 +6,7 @@ class UserService {
         const existingUser = users.find(user => user.email === email);
 
         if (existingUser) {
-            return { message: "Usuário já criado" }
+            return { message: "⚠️ Usuário já criado" }
         }
 
         const hashedPassword = await hashPasword(password);
